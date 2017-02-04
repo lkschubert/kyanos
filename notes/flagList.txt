@@ -5,3 +5,4 @@
 0x20	Talked to luke
 0x21	Talked to old man, got starter
 0x22	Talked to one of your parents
+0x23	Shipwreck has happened
