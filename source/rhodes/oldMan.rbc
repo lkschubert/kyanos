@@ -1,0 +1,30 @@
+#dynamic 0x800000
+#org @start
+lock
+faceplayer
+checkflag 0x20
+if 0x0 goto @firstLine
+checkflag 0x21
+if 0x0 goto @secondLine
+msgbox @thirdLineTxt 0x6
+setflag 0x22
+release
+end
+
+
+#org @firstLine
+msgbox @firstLineText 0x6
+end
+
+#org @secondLine
+msgbox @secondLineText 0x6
+end
+
+#org @firstLineTxt
+= You should go talk to Luke before you go anywhere.
+
+#org @secondLineTxt
+= I know he's creepy but you should talk to the old man.
+
+#org @thirdLineTxt
+= Goodbye, and be safe!
