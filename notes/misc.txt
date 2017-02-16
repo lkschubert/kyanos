@@ -2,4 +2,6 @@ Good/Evil alignment
 	Use 1 flag for alignment with each 'faction'
 		For example you get either full or no alignment with team rocket
 		Example factions: rocket, magma, aqua, police
-
+Camera field of view
+	Player can see 5 tiles above or below themselves
+	Player can see 7 tiles over on either side
