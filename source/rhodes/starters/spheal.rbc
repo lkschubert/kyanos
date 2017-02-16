@@ -1,0 +1,22 @@
+'not sure if i can remove the scripts without the flagging, i'll figure it out as
+'I work on the actual project
+#dynamic 0x800000
+#org @start
+showpokepic 0x16B 0xA 0x3 'displays spheals front sprite
+msgbox @ask 0x5
+compare LASTRESULT 0x1
+if 0x1 goto @yes
+compare LASTRESULT 0x0
+if 0x1 goto @no
+goto @end
+
+#org @yes
+'give them their pokemon here
+
+#org @no
+'tell them to hurry up and pick another pokemon
+
+#org @end
+release
+end
+
