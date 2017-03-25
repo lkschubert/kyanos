@@ -1,0 +1,23 @@
+graph LR
+subgraph Legend
+mainStory[Main Story]
+sideQuest(Side Quest)
+optional((Optional))
+end
+
+subgraph Rhodes
+talkParentsA[Talk to parents for the first time]
+talkLukeA[Talk to luke for the first time]
+getStarter[Talk to old man and receive starter pokemon]
+setSail[Talk to the old man on the beach and take out his sailboat]
+talkParentsA-->getStarter
+talkLukeA-->setSail
+getStarter-->setSail
+end
+
+subgraph Route101
+
+end
+subgraph Ephesus
+
+end
