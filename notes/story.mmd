@@ -1,0 +1,106 @@
+graph TD
+
+subgraph Rhodes
+talkParentsA[Talk to parents for the first time SET 0x493]
+talkLukeA[Talk to luke for the first time SET 0x494]
+getStarter[Talk to old man and receive starter pokemon SET 0x495]
+setSail[Talk to the old man on the beach and take out his sailboat]
+talkParentsA-->|0x493|getStarter
+talkParentsA-->|0x493|talkLukeA
+talkLukeA-->|0x494|setSail
+getStarter-->|0x495|setSail
+end
+
+%%Between Rhodes and Ephesus
+subgraph Route101
+sailBoatCrash[Sail boat crashes against rocks]
+wakeupInHouse[Wake up in house after owner saves you SET 0x496]
+darkTrail[Travel through the dark forest to the north]
+setSail-->sailBoatCrash
+sailBoatCrash-->wakeupInHouse
+wakeupInHouse-->darkTrail
+end
+
+subgraph Ephesus
+gym1[Fight the ephesus gym leader SET SOMEFLAG]
+darkTrail-->gym1
+end
+
+%%Between Ephesus and Troy
+subgraph Route102
+route102[Travel across route 102]
+gym1-->route102
+end
+
+subgraph Hierapolis
+filler
+route102-->|Some HM|filler
+end
+
+subgraph Troy
+gym2[Fight the Troian gym leader SET SOMEFLAG]
+route102-->gym2
+end
+
+%%Between Troy and MT Olympus
+subgraph Route103
+gym2-->filler2
+end
+
+subgraph MTOlympus
+filler2-->filler3
+end
+
+%%From Route 103 to MT Athos
+subgraph Route104
+end
+
+subgraph MtAthos
+end
+
+%%From MT Olympus to delphi
+subgraph Route105
+filler3-->filler4
+end
+
+subgraph Delphi
+end
+
+%%Between delphi and thebes
+subgraph Route107
+filler4-->filler5
+end
+
+subgraph Thebes
+end
+
+%%Between Thebes and Athens north
+subgraph Route108
+end
+
+%%Between Thebes and Athens south
+subgraph Route109
+end
+
+subgraph Athens
+end
+
+%%Between route 109 and olympia
+subgraph Route110
+end
+
+subgraph Olympia
+end
+
+%%Between olympia and sparta
+subgraph Route111
+end
+
+subgraph Knossos
+end
+
+%%Between knossos and rhodes
+subgraph Route 112
+end
+
+%%Figure out how to deal with the interoceanic routing and atlantis
