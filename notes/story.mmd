@@ -1,10 +1,11 @@
 graph TD
 
 subgraph Rhodes
-talkParentsA[Talk to parents for the first time SET 0x493]
-talkLukeA[Talk to luke for the first time SET 0x494]
-getStarter[Talk to old man and receive starter pokemon SET 0x495]
+talkParentsA[Talk to parents for the first time <b>SET 0x493</b>]
+talkLukeA[Talk to luke for the first time SET <b>0x494</b>]
+getStarter[Talk to old man and receive starter pokemon SET <b>0x495</b>]
 setSail[Talk to the old man on the beach and take out his sailboat]
+talkParentsB[Talk to parents after returning to Rhodes]
 talkParentsA-->|0x493|getStarter
 talkParentsA-->|0x493|talkLukeA
 talkLukeA-->|0x494|setSail
@@ -14,7 +15,7 @@ end
 %%Between Rhodes and Ephesus
 subgraph Route101
 sailBoatCrash[Sail boat crashes against rocks]
-wakeupInHouse[Wake up in house after owner saves you SET 0x496]
+wakeupInHouse[Wake up in house after owner saves you <b>SET 0x496</b>]
 darkTrail[Travel through the dark forest to the north]
 setSail-->sailBoatCrash
 sailBoatCrash-->wakeupInHouse
@@ -22,85 +23,108 @@ wakeupInHouse-->darkTrail
 end
 
 subgraph Ephesus
-gym1[Fight the ephesus gym leader SET SOMEFLAG]
+generalEphesus[There are ships in the region as its a sailing port,<br /> but no one can return you to Rhodes]
+gym1[Fight the ephesus gym leader<br />Type:Rock<br />SET SOMEFLAG]
 darkTrail-->gym1
+traderA[Talk to person in random house that has always wanted growlithe.<br />Not sure what they will trade for it]
 end
 
 %%Between Ephesus and Troy
 subgraph Route102
+generalRoute102[Just a random long path with trainers]
 route102[Travel across route 102]
 gym1-->route102
 end
 
 subgraph Hierapolis
 filler
-route102-->|Some HM|filler
+generalHierapolis[A forlorn place in which the ghosts reside.<br />The furthest reaches are the actual gate to hell.]
+route102-->|Strength|filler
 end
 
 subgraph Troy
-gym2[Fight the Troian gym leader SET SOMEFLAG]
+gym2[Fight the Troian gym leader<br/>Type:Normal SET SOMEFLAG]
 route102-->gym2
 end
 
 %%Between Troy and MT Olympus
 subgraph Route103
-gym2-->filler2
+gym2-->generalRoute103
 end
 
-subgraph MTOlympus
-filler2-->filler3
+subgraph MtOlympus
+generalRoute103-->generalMtOlympus
 end
 
 %%From Route 103 to MT Athos
 subgraph Route104
+generalRoute103-->generalRoute104
 end
 
 subgraph MtAthos
+generalRoute104-->generalMtAthos[Some stuff here, probably a legendary]
 end
 
 %%From MT Olympus to delphi
 subgraph Route105
-filler3-->filler4
+generalMtOlympus-->generalRoute105
 end
 
 subgraph Delphi
+generalRoute105-->gym3[Fight the delphian gym leader<br/>Type:Psychic <b>Set Someflag</b>]
 end
 
 %%Between delphi and thebes
 subgraph Route107
-filler4-->filler5
+gym3-->generalRoute107
 end
 
 subgraph Thebes
+generalRoute107-->gym4[Fight thebian gym leader<br />Type:Flying]
 end
 
-%%Between Thebes and Athens north
-subgraph Route108
-end
 
 %%Between Thebes and Athens south
 subgraph Route109
+gym4-->generalRoute109
 end
 
 subgraph Athens
+generalRoute109-->gym5[Fight athenian gym leader<br />Type:Fire]
+end
+%%Between Thebes and Athens north
+subgraph Route108
+gym5-->generalRoute108
 end
 
 %%Between route 109 and olympia
 subgraph Route110
+gym5-->generalRoute110
 end
 
 subgraph Olympia
+generalRoute110-->gym6[Fight olympian gym leader<br/>Type:Electric]
 end
 
 %%Between olympia and sparta
 subgraph Route111
+gym6-->generalRoute111
 end
 
+subgraph Sparta
+generalRoute111-->gym7[Fight spartan gym leader<br />Type:Fighting]
+end
+
+subgraph Route 112
+gym7-->generalRoute112
+end
 subgraph Knossos
+generalRoute112-->gym8[Fight Knossian gym leader<br/>Type:Water]
 end
 
 %%Between knossos and rhodes
-subgraph Route 112
+subgraph Route 113
+gym8-->generalRoute113
 end
 
 %%Figure out how to deal with the interoceanic routing and atlantis
